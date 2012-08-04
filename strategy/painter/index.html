@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Painter</title>
+    <meta name="description" content="Strategy pattern in JavaScript with pretty pictures!">
+    <meta name="author" content="Rob Dodson">
+    <style type="text/css">
+      canvas { 
+        border: 1px solid black; 
+      }
+      canvas, #btns {
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="painter" width="300" height="300"></canvas>
+    <div id="btns">
+      <div><button id="btn-outline" data-brush="outline">Outline</button></div>
+      <div><button id="btn-square" data-brush="square">Square</button></div>
+      <div><button id="btn-circle" data-brush="circle">Circle</button></div>
+    </div>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>
