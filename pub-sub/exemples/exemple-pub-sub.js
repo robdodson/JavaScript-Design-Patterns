@@ -27,18 +27,18 @@ class Socket {
 
 const socket = new Socket()
 
-socket.subscribe("test1", message => {
-  console.log("test1", message)
+socket.subscribe('test1', message => {
+  console.log('test1', message)
 })
 
-socket.subscribe("basket", message => {
-  console.log("basket", message)
+socket.subscribe('basket', message => {
+  console.log('basket', message)
 })
 
-socket.publish("test1", {
-  message: "just a test "
+socket.publish('test1', {
+  message: 'just a test '
 })
 
 socket.broadcast({
-  message: "TEST BROADCAST"
+  message: 'TEST BROADCAST'
 })
