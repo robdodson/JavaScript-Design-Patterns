@@ -1,21 +1,21 @@
-"use strict";
+'use strict'
 
 function Admin() {
-	console.log('Admin created!');
+  console.log('Admin created!')
 }
 
 function Customer() {
-	console.log('Customer created!');
+  console.log('Customer created!')
 }
 
-var UserFactory = {};
+const UserFactory = {}
 UserFactory.createUser = function(type) {
-    if (type == 'admin') {
-        return new Admin();
-    } else if (type == 'customer') {
-        return new Customer();
-    }
-};
+  const allTypes = {
+    admin: Admin,
+    customer: Customer
+  }
+  return new allTypes[type]()
+}
 
-var customer = UserFactory.createUser('admin');
-var customer = UserFactory.createUser('customer');
+var customer = UserFactory.createUser('admin')
+var customer = UserFactory.createUser('customer')
